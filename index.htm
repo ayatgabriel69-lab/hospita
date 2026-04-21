@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشفى الشفاء</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav {
+            background-color: #023e8a;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: #00b4d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>مستشفى الشفاء التخصصي</h1>
+    <p>صحتكم أولويتنا - خدمة 24 ساعة</p>
+</div>
+
+<div class="nav">
+    <a href="#">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#services">الأقسام</a>
+    <a href="#booking">حجز موعد</a>
+</div>
+
+<div class="content">
+
+    <div class="card" id="about">
+        <h2>من نحن</h2>
+        <p>مستشفى الشفاء التخصصي يقدم خدمات طبية متكاملة بأحدث الأجهزة وأمهر الأطباء.</p>
+    </div>
+
+    <div class="card" id="services">
+        <h2>أقسامنا الطبية</h2>
+        <ul>
+            <li>الطوارئ</li>
+            <li>الأطفال</li>
+            <li>الجراحة</li>
+            <li>العيادات الخارجية</li>
+        </ul>
+    </div>
+
+    <div class="card" id="booking">
+        <h2>حجز موعد</h2>
+
+        <form onsubmit="return bookAppointment()">
+            <label>الاسم</label>
+            <input type="text" required>
+
+            <label>رقم الهاتف</label>
+            <input type="tel" required>
+
+            <label>القسم</label>
+            <select required>
+                <option>الطوارئ</option>
+                <option>الأطفال</option>
+                <option>الجراحة</option>
+                <option>العيادات</option>
+            </select>
+
+            <label>التاريخ</label>
+            <input type="date" required>
+
+            <button class="btn">تأكيد الحجز</button>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 مستشفى الشفاء</p>
+</div>
+
+<script>
+function bookAppointment() {
+    alert("تم حجز الموعد بنجاح!");
+    return false;
+}
+</script>
+
+</body>
+</html>
